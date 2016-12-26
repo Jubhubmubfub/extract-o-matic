@@ -1,0 +1,55 @@
+* {
+  padding:0px;
+  margin:0px;
+}
+
+html {
+  background: radial-gradient(darkgrey,black);
+  background-size: cover;
+}
+body {
+}
+
+h1 {
+  text-align: center;
+  padding-top:50px;
+  margin-bottom:20px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+input, select, textarea {
+    color: silver;
+}
+
+
+input {
+  margin-bottom: 20px;
+}
+button {
+  margin-left:200px;
+  padding:5px 10px;
+  border-radius:2px;
+  background: royalblue;
+  border-style: none;
+  box-shadow: 2px 2px 2px black;
+  color:orange;
+  text-shadow: 1px 1px 1px black;
+  margin-bottom: 20px;
+}
+#answer {
+  font-size: 2em;
+}
+
+.wrapper {
+  border-radius:10%;
+  margin-top:50px;
+  padding: 0px 20px;
+  margin-left:auto;
+  margin-right: auto;
+  width:460px;
+  box-shadow: 3px 3px 3px black;
+  height:500px;
+  background:linear-gradient(teal,salmon);
+}

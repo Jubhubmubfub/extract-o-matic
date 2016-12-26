@@ -1,14 +1,35 @@
+function extract(num,digit){
+  //use a counter to represent the digit place
+var count = 0;
+  //for loop increments by power of 10 to target each digit per count
+  for(var i = 1; count <= digit; i*=10){
+    //this moves decimal point over
+    var extract = num/i;
+    //gets rid of the decimal number part and saves the spot in the 1 position
+    var dig = Math.floor(extract%10);
+    //increments count
+    count++
+  }
+  //after count has reached digit, return the value
+  return "The exctracted number is: " +dig;
+}//end of extract function
+
+
+
 $(document).ready(function(){
   console.log("document has loaded");
 
+  $('#number').click(function(){
+    $('input,select,textarea').css('color','black')
 
-  //write a function that extracts a digit from a large number, probably using modulo.
-  //if you have 12345, 0 digit is 5, 1 digit is 4, 2 digit is 3, 4 digit is 2, and 5 digit 
-  function extract(num,digit){
+  })
 
+  $('form').on('click','button',function(){
+    console.log("you clicked the button");
+    console.log(extract($('#number').val(),$('#digit').val()));
 
+    $('#answer').html("<p>"+extract($('#number').val(),$('#digit').val())+"</p>");
 
-  }//end of extract function
-
+  })//end of click function
 
 })//end of doucment ready
